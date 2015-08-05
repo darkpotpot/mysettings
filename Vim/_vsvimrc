@@ -1,0 +1,42 @@
+"Set mapleader
+let mapleader = ","
+let g:mapleader = ","
+
+" Quickly edit/reload the vimrc file
+nnoremap <leader>ev :e C:\Users\potiron\_vsvimrc<CR>
+nnoremap <leader>sv :so C:\Users\potiron\_vsvimrc<CR>
+
+" It clears the search buffer when you press ,/
+" (Tired of clearing highlighted searches by searching for “ldsfhjkhgakjks")
+nmap <leader>/ :nohlsearch<CR>
+nmap <leader>> :%s#\s*\r\?$##<CR>:nohlsearch<CR>
+
+" to avoid doing ctrl+c or ESC to exit insert mode
+inoremap jj <ESC>
+
+"set clipboard=unnamed " pour copier/coller dans le clipboard général
+
+" Navigation {{{
+    nmap <C-O> :vsc View.NavigateBackward<CR>
+    nmap <C-I> :vsc View.NavigateForward<CR>
+
+     " Go To Next Error in Solution"
+    nmap <Leader>n :vsc View.NextError<CR>
+    nmap <Leader>N :vsc View.PreviousError<CR>
+"}}}
+
+
+" Build {{{
+    nnoremap <leader>B :vsc Build.BuildSolution<CR>
+
+    nmap <leader>s :vsc Debug.Start<CR>
+    nmap <leader>S :vsc Debug.StopDebugging<CR>
+
+" }}}
+
+" Code Edit {{{
+    nnoremap <Leader>cc :vsc Edit.CommentSelection<CR>
+    vnoremap <Leader>cc :vsc Edit.CommentSelection<CR>
+    nnoremap <Leader>cu :vsc Edit.UncommentSelection<CR>
+    vnoremap <Leader>cu :vsc Edit.UncommentSelection<CR>
+" }}}
