@@ -1,0 +1,3 @@
+source $VimCfgFolder\_vimrc.vim
+source $VimCfgFolder\_vsvimrc
+
