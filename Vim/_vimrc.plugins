@@ -1,0 +1,17 @@
+"plugin Nerd tree
+map <F2> :NERDTreeToggle<CR>
+let NERDTreeIgnore=['\.pyo$', '\~$']
+
+" plugin Gundo
+nnoremap <F3> :GundoToggle<CR>
+
+" Formate correctement le xml (outil externe)
+map <F4> :% !xmllint.exe % --format<CR>
+
+" passage en hexa et inversement
+map <F9> :%!xxd<CR>
+map <F10> :%!xxd -r<CR>
+
+" plugin alignement
+map <F12> :Align 
+

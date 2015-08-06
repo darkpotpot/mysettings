@@ -1,0 +1,7 @@
+let $VimCfgFolder = resolve(expand('<sfile>:p:h'))
+
+source $VimCfgFolder\_vimrc.vim
+source $VimCfgFolder\_vimrc.gvim
+source $VimCfgFolder\_vimrc.plugins
+source $VimCfgFolder\_vimrc.vundle
+

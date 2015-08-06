@@ -1,0 +1,16 @@
+set ruler "pour afficher la ligne/colonne en bas
+
+"set colorcolumn=80,120 "red column
+
+set guifont=ProggyCleanTT:h12
+set guioptions-=T "get rid of toolbar
+colo desert
+
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+nnoremap <silent> <C-N> :bn<CR>
+nnoremap <silent> <C-P> :bp<CR>
