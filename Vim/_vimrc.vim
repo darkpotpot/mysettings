@@ -1,3 +1,6 @@
+" don't include vi compatibility
+set nocompatible
+
 "Set mapleader
 let mapleader = ","
 let g:mapleader = ","
@@ -10,6 +13,9 @@ let g:mapleader = ","
 set hidden
 nnoremap gm m
 
+" make j and k act normally for wrapped lines
+nnoremap j gj
+nnoremap k gk
 
 " Also, I like Vim to have a large undo buffer, a large history of commands,
 " ignore some file extensions when completing names by pressing Tab,
@@ -25,6 +31,10 @@ set undodir=~/.vim/undodir
 set undofile
 set undolevels=1000 "maximum number of changes that can be undone
 set undoreload=10000 "maximum number lines to save for undo on a buffer reload
+
+" show trailing whitespace chars
+set list
+set listchars=tab:>-,trail:.,nbsp:+
 
 " It clears the search buffer when you press ,/
 " (Tired of clearing highlighted searches by searching for “ldsfhjkhgakjks")
@@ -42,10 +52,8 @@ filetype plugin on
 set smartindent
 set autoindent
 set expandtab
-set list
 set cursorline
 set hidden
-set listchars=tab:>-,trail:.,nbsp:+
 se et ts=8 sw=4 softtabstop=4 smarttab
 au BufEnter *.py set sw=4 sts=4 ts=4 et sta ai
 
@@ -55,3 +63,6 @@ inoremap jj <ESC>
 set bs=2 "pour le backspace
 
 "set clipboard=unnamed " pour copier/coller dans le clipboard général
+
+" permettre le checkout des fichiers
+command! -nargs=1 TF !"C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer\TF.exe" <args> %:p
